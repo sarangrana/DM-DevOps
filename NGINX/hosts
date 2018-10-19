@@ -1,0 +1,14 @@
+  GNU nano 2.5.3                               File: /etc/hosts                                                                      
+
+127.0.0.1 localhost localhost.localdomain
+#127.0.1.1      ubuntu
+172.27.56.145 dmsar.dm.com
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback localhost6 localhost6.localdomain
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+# Ansible inventory hosts BEGIN
+172.27.56.145 master master.cluster.local
+172.27.15.47 node1 node1.cluster.local
+172.27.15.83 node2 node2.cluster.local
+# Ansible inventory hosts END
