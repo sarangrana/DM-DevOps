@@ -424,7 +424,15 @@ got to /home
 generate ssh key and do ssh-copy id
 check with
 ansible all -m ping
+	- to check connection between ansible master and hosts
+	
+ansible all -a "ls -a /home/ansible/"
+	- to list dir of hosts
 
+ansible all -m copy -a "src=test.txt dest=/tmp/test.txt"
+	- to copy file to hosts
+To view file on nodes follow below steps,
+	- ls -al /tmp
 
 Ansible host file location : /etc/ansible/hosts
 
