@@ -252,6 +252,15 @@ locate <file-name>
 3. To check port status
 sudo netstat -ntlp
 
+4. To view space
+du -sh *
+du -sh * | grep G	-	will show the result if text is having G
+df -h
+
+5. telnet <endpoint> <port>		-	To check connection
+6. scp <files> user@ip:<location>	- 	To copy files
+7. service ufw stop|status|start	-	To enable & disable firewall
+
 
 
 
