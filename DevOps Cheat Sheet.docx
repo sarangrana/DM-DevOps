@@ -446,6 +446,8 @@ ansible onprem -s -m user -a "name=test"
 ansible onprem -s -m user -a "name=test state=absent"
 	- to remove user on remote host
 
+ansible-playbook test.yaml --extra-vars "hosts=ubuntu gather=yes package=apt"
+	- to supply values to variables in playbook [variable are defined in playbook as {{ hosts }}, {{ gather }}, {{ package }}
 
 
 
