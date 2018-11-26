@@ -434,6 +434,22 @@ ansible all -m copy -a "src=test.txt dest=/tmp/test.txt"
 To view file on nodes follow below steps,
 	- ls -al /tmp
 
+ansible onprem -s -m apt -a "name=npm state=present"
+	- to install any packages on remote hosts
+
+ansible onprem -s -m apt -a "name=npm state=absent"
+	- to remove any packages on remote hosts
+
+ansible onprem -s -m user -a "name=test"
+	- to create user on remote host
+	
+ansible onprem -s -m user -a "name=test state=absent"
+	- to remove user on remote host
+
+
+
+
+
 Ansible host file location : /etc/ansible/hosts
 
 ansible all -m ping
