@@ -415,6 +415,16 @@ Ctrl + P + Q = To exit container without killing it
 				ANSIBLE
 ------------------------------------------------------------------
 
+To configure ansible 
+create ansible user in all the machine including host
+- make sure u have created home directory for ansible and given access to ansible user
+got to /home
+	- mkdir ansible
+	- chown ansible:ansible ansible
+generate ssh key and do ssh-copy id
+check with
+ansible all -m ping
+
 
 Ansible host file location : /etc/ansible/hosts
 
