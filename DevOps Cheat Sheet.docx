@@ -6,14 +6,16 @@ git config --global user.name "Sarang"
 git config --global user.email "sarangrana@gmail.com"
 git config --list
 
-
-
 git clone https://github.com/sarangrana/godrepo.git
 git clone git@github.com:sarangrana/godrepo.git
 git status
 git add <file-name>
 git commit -m "Multiple Instance Code Implemented"
 
+git branch			-	will show local branches
+git branch -r			- 	will show all remote branches
+git checkout <branch-name>	-	to switch branch
+git fetch vs git pull
 
 
 
