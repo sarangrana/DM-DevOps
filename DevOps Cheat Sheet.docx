@@ -17,6 +17,8 @@ git branch -r			- 	will show all remote branches
 git checkout <branch-name>	-	to switch branch
 git fetch vs git pull
 
+checkout single branch from remote repo
+- git clone --single-branch -b dm6904kompose_simple https://sarangr@bitbucket.org/decisionmines/devops.git
 
 
 ------------------------------------------------------------------
