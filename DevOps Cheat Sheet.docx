@@ -1,6 +1,6 @@
 ﻿------------------------------------------------------------------
 				Git
-------------------------------------------------------------------
+-------------------------------------------------------------------
 
 git config --global user.name "Sarang"
 git config --global user.email "sarangrana@gmail.com"
@@ -458,3 +458,35 @@ Ansible host file location : /etc/ansible/hosts
 
 ansible all -m ping
 	- will ping all the hosts mentioned in hosts file and give the status
+	
+﻿------------------------------------------------------------------
+				Shell Scripting
+-------------------------------------------------------------------
+
+start with "#!bin/bash"
+For Loop :
+	for i in 1 2 3 4 5
+	do
+  		echo "Looping ... number $i"
+	done
+
+While Loop :
+	INPUT_STRING=hello
+	while [ "$INPUT_STRING" != "bye" ]
+	do
+  		echo "Please type something in (bye to quit)"
+		read INPUT_STRING
+		echo "You typed: $INPUT_STRING"
+	done
+
+If..else.. :
+	if  [ something ]; then
+	 	echo "Something"
+	 elif [ something_else ]; then
+	   	echo "Something else"
+	 else
+	   	echo "None of the above"
+	fi
+
+
+
