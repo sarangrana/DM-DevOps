@@ -262,9 +262,36 @@ df -h
 5. telnet <endpoint> <port>		-	To check connection
 6. scp <files> user@ip:<location>	- 	To copy files
 7. service ufw stop|status|start	-	To enable & disable firewall
+8. tcpdump
+	- tcpdump is a most powerful and widely used command-line packets sniffer or package analyzer tool which is 
+	used to capture or filter TCP/IP packets that received or transferred over a network on a specific interface. 
+	It is available under most of the Linux/Unix based operating systems. 
+	tcpdump also gives us a option to save captured packets in a file for future analysis. 
+	It saves the file in a pcap format, that can be viewed by tcpdump command or a open source GUI based tool 
+	called Wireshark (Network Protocol Analyzier) that reads tcpdump pcap format files.
+9. tcpdump -c 5
+	- top 5 packets
+10. tcpdump -D
+	- will display available interfaces
+11. tcpdump -w 0001.pcap
+	- save result in file
+	
+	
+12.netstat
+	- netstat (network statistics) is a command line tool for monitoring network connections both incoming and 
+	outgoing as well as viewing routing tables, interface statistics etc. netstat is available on all Unix-like 
+	Operating Systems and also available on Windows OS as well. It is very useful in terms of network troubleshooting 
+	and performance measurement. netstat is one of the most basic network service debugging tools, telling you what 
+	ports are open and whether any programs are listening on ports.
 
-
-
+13. netstat -a | more
+	- Listing all ports (both TCP and UDP) using netstat -a option.
+14. netstat -at
+	- Listing only TCP (Transmission Control Protocol) port connections using netstat -at.
+15. netstat -s
+	- Displays statistics by protocol.
+	
+https://www.tecmint.com/ssh-interview-questions/
 
 
 
@@ -412,6 +439,13 @@ Ctrl + P + Q = To exit container without killing it
 8. Docker rmi $(docker images -q)
 	- Remove all docker images
 
+Linked containers on the default bridge network share environment variables.
+
+Originally, the only way to share environment variables between two containers was to link them using the --link flag. This type of variable sharing is not possible with user-defined networks. However, there are superior ways to share environment variables. A few ideas:
+
+Multiple containers can mount a file or directory containing the shared information, using a Docker volume.
+
+Multiple containers can be started together using docker-compose and the compose file can define the shared variables.
 
 ------------------------------------------------------------------
 				ANSIBLE
