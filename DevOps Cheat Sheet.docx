@@ -24,6 +24,34 @@ checkout single branch from remote repo
 ------------------------------------------------------------------
 				Kubernetes
 ------------------------------------------------------------------
+Port: Port is the port number which makes a service visible to other services running within the same K8s cluster. 
+In other words, in case a service wants to invoke another service running within the same Kubernetes cluster, 
+it will be able to do so using port specified against “port” in the service spec file.
+
+Target Port: Target port is the port on the POD where the service is running.
+
+Nodeport: Node port is the port on which the service can be accessed from external users using Kube-Proxy. 
+Take a look at following spec defining a sample service:
+
+        apiVersion: v1
+        kind: Service
+        metadata:
+          name: test-service
+        spec:
+          ports:
+          - port: 8080
+            targetPort: 8170
+            nodePort: 33333
+            protocol: TCP 
+          selector:
+            component: test-service-app
+Pay attention to some of the following in above spec:
+
+The port is 8080 which represents that test-service can be accessed by other services in the cluster at port 8080. 
+The targetPort is 8170 which represents the test-service is actually running on port 8170 on pods 
+The nodePort is 33333 which represents that test-service can be accessed via kube-proxy on port 33333.
+
+
 1. To remotely access your cluster from another machine
 get content of the admin.conf file from /etc/kubernetes/
 now on remote machine from which you need to connect, copy this file as "~/.kube/config"
