@@ -484,6 +484,7 @@ RUN A MYSQL Container
 2. docker ps
 3. docker logs mysql1 2>&1 | grep GENERATED
 4. docker exec -it mysql1 mysql -uroot -p
+5. ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 
 ------------------------------------------------------------------
 				ANSIBLE
