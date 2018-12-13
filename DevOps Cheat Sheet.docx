@@ -476,6 +476,15 @@ Multiple containers can mount a file or directory containing the shared informat
 
 Multiple containers can be started together using docker-compose and the compose file can define the shared variables.
 
+
+
+RUN A MYSQL Container
+
+1. docker run --name=mysql1 -d mysql/mysql-server:latest
+2. docker ps
+3. docker logs mysql1 2>&1 | grep GENERATED
+4. docker exec -it mysql1 mysql -uroot -p
+
 ------------------------------------------------------------------
 				ANSIBLE
 ------------------------------------------------------------------
