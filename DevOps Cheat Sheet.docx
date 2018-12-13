@@ -264,7 +264,8 @@ Network isolation at Pod level by using annotations
 $ kubectl annotate ns <namespace> "net.beta.kubernetes.io/network-policy={\"ingress\": {\"isolation\": \"DefaultDeny\"}}"
 
 
-
+Service <-> Deployment mapping :  Labels & Selectors 
+Service <-> Service Mapping : Service URL mapping
 
 
 
