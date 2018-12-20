@@ -267,7 +267,11 @@ $ kubectl annotate ns <namespace> "net.beta.kubernetes.io/network-policy={\"ingr
 Service <-> Deployment mapping :  Labels & Selectors 
 Service <-> Service Mapping : Service URL mapping
 
+kubectl config set-context $(kubectl config current-context) --namespace=default
+kubectl config view | grep namespace:
 
+kubectl api-resources --namespaced=true
+kubectl api-resources --namespaced=false
 
 
 ------------------------------------------------------------------
