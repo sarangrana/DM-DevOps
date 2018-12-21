@@ -274,6 +274,19 @@ kubectl api-resources --namespaced=true
 kubectl api-resources --namespaced=false
 
 
+When node is in NotReady state follow below process,
+switch to root
+swapoff -a
+systemctl restart docker
+systemctl restart kubelet
+
+
+If you restart your master and you are not able to use kubectl then follow below steps
+sudo -i
+swapoff -a
+exit
+strace -eopenat kubectl version
+
 ------------------------------------------------------------------
 				LINUX
 ------------------------------------------------------------------
