@@ -286,10 +286,14 @@ sudo -i
 swapoff -a
 exit
 strace -eopenat kubectl version
+Remove swap: That's easy, just disable it as you already listed but make it permanent by commenting swap 
+line in /etc/fstab file. Add # before line creating swap mount point and next time you restart you won't have it.
 
 
 
 kubectl get endpoints ${SERVICE_NAME}
+
+
 
 ------------------------------------------------------------------
 				LINUX
