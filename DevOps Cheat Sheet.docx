@@ -293,7 +293,7 @@ line in /etc/fstab file. Add # before line creating swap mount point and next ti
 
 kubectl get endpoints ${SERVICE_NAME}
 
-
+https://docs.okd.io/latest/install_config/storage_examples/shared_storage.html
 
 ------------------------------------------------------------------
 				LINUX
