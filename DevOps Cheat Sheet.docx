@@ -355,6 +355,8 @@ https://www.tecmint.com/ssh-interview-questions/
 
 https://docs.okd.io/latest/install_config/storage_examples/shared_storage.html
 
+16. hostnamectl, cat /proc/sys/kernel/hostname
+Get Hostname
 
 
 
