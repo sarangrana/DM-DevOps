@@ -300,6 +300,18 @@ https://docs.okd.io/latest/install_config/storage_examples/shared_storage.html
 
 kubectl create configmap authapi-config-map --from-file authapi-config-map.yaml \ --dry-run -o yaml | kubectl replace -f -
 
+## If you ,mount configmap like below, it will create FILE SAME AS CONFIG-MAP.YAML NAME inside CONTAINER
+	volumeMounts:
+        - mountPath: /kotakjobs/etl/etlconfig
+          name: etlconfig-configmap
+	
+If you want any specific file name and extension, mount config map as below,
+
+        volumeMounts:
+        - name: etl-config-volume
+          mountPath: /kotakjobs/etl/etlconfig/config.properties
+          subPath: config.properties
+
 ------------------------------------------------------------------
 				LINUX
 ------------------------------------------------------------------
