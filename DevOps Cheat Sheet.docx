@@ -311,6 +311,22 @@ If you want any specific file name and extension, mount config map as below,
         - name: etl-config-volume
           mountPath: /kotakjobs/etl/etlconfig/config.properties
           subPath: config.properties
+	  
+	  
+	  
+	  
+If you want whenever you change the config-map, the pod needs to be restarted, use reloader.
+Link : https://github.com/stakater/reloader
+
+1. You just need to deploy below pod in your cluser
+kubectl apply -f https://raw.githubusercontent.com/stakater/Reloader/master/deployments/kubernetes/reloader.yaml
+
+2. and then add annotations to your deployment as mentioned.
+metadata:
+  #use annotation block if you want to restart the pod (re-deploy the deployment whenever configmap is changed)
+  annotations:
+    configmap.reloader.stakater.com/reload: "actual-configmap-name1,actual-configmap-name2"
+
 
 ------------------------------------------------------------------
 				LINUX
