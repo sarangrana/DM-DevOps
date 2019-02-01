@@ -326,6 +326,9 @@ metadata:
   #use annotation block if you want to restart the pod (re-deploy the deployment whenever configmap is changed)
   annotations:
     configmap.reloader.stakater.com/reload: "actual-configmap-name1,actual-configmap-name2"
+    
+## Removal of node from kubernetes cluster
+https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/
 
 
 ------------------------------------------------------------------
