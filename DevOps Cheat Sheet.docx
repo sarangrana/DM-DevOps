@@ -331,6 +331,31 @@ metadata:
 https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/
 
 
+
+When node is in NotReady state, check your kubelet and docker services with below commands,
+systemctl status docker
+systemctl status kubelet
+If both the services are stopped / inactive / active, follow below process to recover node.
+switch to root
+swapoff -a
+systemctl restart docker
+systemctl restart kubelet
+       This will disable swap option as kubernetes needs swapoff to work.
+
+
+
+If you restart your master and you are not able to use kubectl then follow below steps
+sudo -i
+swapoff -a
+exit
+strace -eopenat kubectl version
+Remove swap permanently: You can make it permanent by commenting swap line in /etc/fstab file.
+
+Add # before line creating swap mount point and next time you restart you won't have it.
+
+
+
+
 ------------------------------------------------------------------
 				LINUX
 ------------------------------------------------------------------
