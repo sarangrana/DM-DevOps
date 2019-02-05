@@ -354,6 +354,19 @@ Remove swap permanently: You can make it permanent by commenting swap line in /e
 Add # before line creating swap mount point and next time you restart you won't have it.
 
 
+* Whenerver there is chnage in config.yaml file then restart only service config and everything will be updated.
+
+* Sometimes special characters can cause pod to fail.
+
+* When we want to point to simlinks then we need to comment to subpath.
+
+* volume mounting of multiple containers <logs> on single persistent volume can be achieved with subpath.
+
+* All configurations are kept in single config map i.e serviceconfig yaml. <only when they are at same location>
+
+* Error: Interanal server error.
+
+* Change in env.json should be reflected in pod without restart.
 
 
 ------------------------------------------------------------------
