@@ -369,6 +369,10 @@ Add # before line creating swap mount point and next time you restart you won't 
 * Change in env.json should be reflected in pod without restart.
 
 
+#######   To give access to jenkins user,
+kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
+
+
 ------------------------------------------------------------------
 				LINUX
 ------------------------------------------------------------------
